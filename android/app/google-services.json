@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "313323653687",
+    "project_id": "flash-chat-5d3d2",
+    "storage_bucket": "flash-chat-5d3d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313323653687:android:5ba53166e85fa23cc8cdb2",
+        "android_client_info": {
+          "package_name": "co.qingzhao.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313323653687-9b5559f7h4lbkg92rgr0dm0nf6vk3gq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClOW9BZ5P3kl3GGAUR11HVjLorgfqEGfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313323653687-9b5559f7h4lbkg92rgr0dm0nf6vk3gq5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "313323653687-vka2vfeddqc1nvqavh8lhlmj9b7t1vko.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.qingzhao.flashChat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

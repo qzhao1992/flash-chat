@@ -13,12 +13,12 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProviderStateMixin{
-
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
   AnimationController controller;
   Animation animation;
 
-  void initState(){
+  void initState() {
     super.initState();
 
     controller = AnimationController(
@@ -27,8 +27,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     );
 //    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
 
-    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
+
     controller.forward();
+
     controller.addListener(() {
       setState(() {});
       print(animation.value);
@@ -54,7 +57,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             Row(
               children: <Widget>[
                 Hero(
-                  tag:'logo',
+                  tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
                     height: 60.0,
@@ -63,36 +66,42 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 SizedBox(
                   child: DefaultTextStyle(
                     style: const TextStyle(
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.w900,
+                      color: Colors.black,
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                    ),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText(
+                          'Flash Chat',
                         ),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      TypewriterAnimatedText(
-                        'Flash Chat',
-                      ),
-                    ],
+                        // textStyle:
+                      ],
+                    ),
                   ),
-                  )
                 ),
               ],
             ),
             SizedBox(
               height: 48.0,
             ),
-            RoundedButton(title: 'Login', colour: Colors.blueAccent,
-              onPressed: (){
+            RoundedButton(
+              title: 'Login',
+              colour: Colors.blueAccent,
+              onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
-            },),
-            RoundedButton(title: 'Register', colour: Colors.blueAccent,
-              onPressed: (){
+              },
+            ),
+            RoundedButton(
+              title: 'Register',
+              colour: Colors.blueAccent,
+              onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
-              },),
+              },
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
